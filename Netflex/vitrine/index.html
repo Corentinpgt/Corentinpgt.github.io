@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="asset/logo2.svg" />
+    <title>Greatest global cinema on BFI Player</title>
+</head>
+
+<body>
+
+    <div class="main">
+        <header class="main_header">
+            <img onclick="window.location.reload()" class="header_img" src="asset/logo.svg" alt="logo">
+
+            <div class="header_right">
+
+                <select class="profiles_container">
+
+                </select>
+                <template id="template_profile">
+                    <option value="{{idprof}}" class="idprofile">{{profiles}}</option>
+                </template>
+                <button onclick="requestPlaylist()" class="header_playlist" aria-label="Bouton Playlist">Playlist</button>
+
+                <button class="header_btn-menu" onclick="openClose()" aria-label="Bouton Menu">
+                    <span class="header_btn-menu-bar "></span>
+                </button>
+                <div class="header_menu-btn">
+                    <button class="menu_btn_all" onclick="openClose(), requestGetMovies()" aria-label="Bouton qui affiche tous les films">ALL</button>
+                    <h2 class="category_title">Voici toutes les categories présentes dans la
+                        BDD :</h2>
+                    <ul class="category_container">
+
+                    </ul>
+                    <template id="template_category">
+                        <li onclick="openClose(), requestCategory('{{idcat}}')">{{category}}</li>
+
+                    </template>
+
+                </div>
+            </div>
+
+
+        </header>
+
+        <div class="search-bar">
+            <input type="text" class="search-bar_input" placeholder="Le chat potté...">
+            <button onclick="requestSearch()" class="search-bar_btn" aria-label="Bouton barre de recherche">Rechercher</button>
+        </div>
+
+
+        <div class="template">
+            <h2 class="enavant_title">Ne ratez pas nos films les plus populaires !</h2>
+            <div class="template_enavant">
+
+            </div>
+        </div>
+
+
+        <template id="template">
+            <div class="card">
+                <img class="card_img" src="{{img}}" alt="Mignature">
+                <div class="card_review ">
+                    <h2 class="review_green">Note : {{note}}/5</h2>
+                </div>
+                <div class="card_content">
+                    <h1 class="card_title">{{title}}</h1>
+                    <h2 class="card_year">{{year}}</h2>
+                </div>
+                <h2 class="card_realisator">{{realisator}}</h2>
+                <div class="card_btn-all">
+                    <button onclick="requestOneMovie('{{id}}')" class="card_btn-view review_green" aria-label="Bouton qui affiche le trailer">Voir</button>
+
+                    <button onclick="addPlaylist('{{id}}')" class="card_btn-add review_green" aria-label="Bouton ajouter dans la playlist">+</button>
+
+                </div>
+            </div>
+        </template>
+
+        <template id="template2">
+            <div class="card">
+                <img class="card_img" src="{{img}}" alt="Mignature">
+                <div class="card_review">
+                    <h2 class="review_brown">Note : {{note}}/5</h2>
+                </div>
+                <div class="card_content">
+                    <h1 class="card_title">{{title}}</h1>
+                    <h2 class="card_year">{{year}}</h2>
+                </div>
+                <h2 class="card_realisator">{{realisator}}</h2>
+                <div class="card_btn-all">
+                    <button onclick="requestOneMovie('{{id}}')" class="card_btn-view review_brown" aria-label="Bouton qui affiche le trailer">Voir</button>
+
+                    <button onclick="removeFromPlaylist('{{id}}'), requestPlaylist()" class="card_btn-add review_brown" aria-label="Bouton supprimer dans la playlist">-</button>
+
+                </div>
+            </div>
+        </template>
+
+        <template id="template3">
+            <div class="card">
+                <img class="card_img" src="{{img}}" alt="Mignature">
+                <div class="card_review ">
+                    <h2 class="review_red">Note : {{note}}/5</h2>
+                </div>
+                <div class="card_content">
+                    <h1 class="card_title">{{title}}</h1>
+                    <h2 class="card_year">{{year}}</h2>
+                </div>
+                <h2 class="card_realisator">{{realisator}}</h2>
+                <div class="card_btn-all">
+                    <button onclick="requestOneMovie('{{id}}')" class="card_btn-view review_red" aria-label="Bouton qui affiche le trailer">Voir</button>
+
+                    <button onclick="addPlaylist('{{id}}')" class="card_btn-add review_red" aria-label="Bouton ajouter dans la playlist">+</button>
+
+                </div>
+            </div>
+        </template>
+
+        <template id="template_iframe">
+            <div class="trailer-review">
+                <iframe class="iframe" width="560" height="315" src="{{ytb}}" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <div class="review-bar">
+                    <input type="number" min="0" max="5" class="review_input" placeholder="Notez !">
+                    <button onclick="addNote('{{id}}')" class="review_btn" aria-label="Bouton ajouter une note">Envoyer</button>
+                </div>
+            </div>
+        </template>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

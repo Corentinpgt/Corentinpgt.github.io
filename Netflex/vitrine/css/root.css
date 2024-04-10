@@ -1,0 +1,31 @@
+:root {
+    --black : rgb(13, 18, 21);
+    --white : rgb(255, 255, 255);
+    --white2 : rgb(245, 245, 245);
+    --red : rgb(207, 71, 74);
+    --brown : rgb(131, 108, 70);
+    --green : rgb(37, 133, 110);
+    --blue : rgb(74, 144, 226);
+
+    --fs-1 : 0.875rem;
+    --fs-2 : 1rem;
+    --fs-3 : 1.25rem;
+    --fs-4 : 2rem;
+    
+    --border : var(--blue);
+    --bg : var(--black);
+    --bg2 : var(--red);
+    --bg3 : var(--brown);
+    --bg4 : var(--green);
+    --bg5 : var(--white);
+    --bg6 : var(--white2);
+    --fc : var(--white);
+    --fc2 : var(--black);
+    --svgfill : var(--white);
+    --svgfillb : var(--black);
+
+    --fsnote : var(--fs-1);
+    --fsmenu : var(--fs-2);
+    --fsbtn : var(--fs-3);
+    --fstitle : var(--fs-4)
+}
