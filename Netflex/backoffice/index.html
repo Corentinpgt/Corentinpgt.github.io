@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>Back Office</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+
+    <section>
+
+        <nav>
+            <h1>BACK OFFICE</h1>
+            <h2>Ajouter un film</h2>
+        </nav>
+
+        <form method='GET' action="../server/script.php">
+
+            <input type="number" name="category" placeholder="Saisir une categorie">
+            <input type="text" name="title" placeholder="Saisir un titre">
+            <input type="text" name="realisator" placeholder="Saisir un réalisateur">
+            <input type="number" name="year" placeholder="Saisir une année">
+            <input type="text" name="img" placeholder="Saisir un lien d'image">
+            <input type="text" name="ytb" placeholder="Saisir un lien de trailer youtube">
+
+            <input type="submit" value="addmovie" name="action">
+
+        </form>
+
+
+        <nav>
+            <h2>Ajouter un profil</h2>
+        </nav>
+
+
+        <form method='GET' action="../server/script.php">
+
+            <input type="text" name="name" placeholder="Saisir un nom d'utilisateur">
+
+            <input type="submit" value="addprofile" name="action">
+
+        </form>
+
+
+        <nav>
+            <h2>Supprimer un profil</h2>
+        </nav>
+
+        <form>
+
+            <select class="profiles_container">
+
+            </select>
+
+            <input type="submit" value="Delete" onclick="removeProfiles()">
+
+        </form>
+        <template id="template_profile">
+            <option value="{{idprof}}" class="idprofile">{{profiles}}</option>
+        </template>
+
+
+        <nav>
+            <h2>Mettre/enlever un site en avant</h2>
+        </nav>
+
+        <form>
+
+            <select class="films_container">
+
+            </select>
+
+            <input type="text" class="enavant" placeholder="1 - En avant">
+
+            <input type="submit" value="Update" onclick="updateFilms()">
+
+        </form>
+        <template id="template_films">
+            <option value="{{idfilms}}" class="idfilms">{{films}}</option>
+        </template>
+
+
+
+
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

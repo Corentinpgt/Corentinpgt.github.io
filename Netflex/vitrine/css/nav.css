@@ -1,0 +1,135 @@
+@import url("reset.css");
+@import url("root.css");
+
+.main_header {
+    background-color: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header_img {
+    display: flex;
+    padding: 1rem;
+    width: 20rem;
+    height: 3rem;
+
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.profiles_container {
+    font-size: var(--fs-2);
+    background-color: var(--bg);
+    color: var(--fc);
+    border: none;
+}
+.profiles_container option {
+    color: var(--fc);
+}
+
+.header_playlist {
+    font-weight: 700;
+    font-size: var(--fs-2);
+    background-color: var(--bg);
+    color: var(--fc);
+    border: none;
+}
+
+.header_playlist:hover {
+    text-decoration: underline;
+}
+
+.main_header.isopen .header_menu-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header_btn-menu {
+    width: 5rem;
+    height: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border: none;
+    background-color: var(--bg);
+    cursor: pointer;
+    z-index: 20;
+
+}
+
+.header_btn-menu-bar {
+    margin: .25rem 0;
+
+}
+
+.header_menu-btn {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--bg);
+    color: var(--fc);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+
+
+.header_btn-menu-bar,
+.header_btn-menu::after,
+.header_btn-menu::before {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: .23rem;
+    background: var(--svgfill);
+    transition: all .2s ease-in-out;
+}
+
+.main_header.isopen .header_btn-menu-bar {
+    opacity: 0;
+}
+
+.main_header.isopen .header_btn-menu::before {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.main_header.isopen .header_btn-menu::after {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.menu_btn_all {
+    background-color: var(--bg);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--fc);
+    border: none;
+    cursor: pointer;
+}
+
+.category_container {
+    padding: 0;
+    text-align: center;
+
+}
+
+.category_container li {
+    cursor: pointer;
+}
+.category_container li:hover {
+    text-decoration: underline;
+}

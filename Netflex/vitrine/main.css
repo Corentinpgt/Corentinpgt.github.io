@@ -1,0 +1,254 @@
+@import url("css/reset.css");
+@import url("css/nav.css");
+@import url("css/root.css");
+
+
+body {
+    background-color: var(--bg);
+}
+
+.main {}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: 1rem;
+    background-color: var(--bg6);
+}
+
+.search-bar_input {
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    background-color: var(--bg5);
+    color: var(--fc2);
+    border: 5px solid var(--border);
+    border-radius: .25rem;
+}
+
+.search-bar_btn {
+    padding: 1rem;
+    font-weight: 700;
+    background-color: var(--bg5);
+    border: 5px solid var(--border);
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.search_icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.template {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.template_enavant {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+.enavant_title {
+    width: 100%;
+    text-align: start;
+    background-color: var(--bg2);
+    color: var(--fc);
+}
+
+#template {
+    padding: 2rem;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--bg);
+    width: 80%;
+}
+
+.card_review {
+    position: absolute;
+    top: .75rem;
+    left: .75rem;
+
+}
+
+.card_review h2 {
+    padding: 0 .5rem;
+    color: var(--fc);
+}
+
+.card_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_title {
+    text-decoration: underline;
+    color: var(--fc);
+
+}
+
+.card_year {
+    color: var(--fc);
+}
+
+.card_realisator {
+    margin-bottom: 1rem;
+    color: var(--fc);
+
+}
+
+.card_btn-all {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card_btn-view {
+    width: 50%;
+    font-size: 1.5rem;
+    color: var(--fc);
+    border: none;
+    border-radius: .25rem;
+
+}
+
+.card_btn-view:hover {
+    cursor: pointer;
+}
+
+.card_btn-add {
+    width: 4rem;
+    height: 4rem;
+    font-size: 3rem;
+    color: var(--fc);
+    border: none;
+    border-radius: 1rem;
+}
+
+.card_btn-add:hover {
+    cursor: pointer;
+}
+
+.card_btn-toggle button {
+    padding: .75rem 1.5rem;
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+    background-color: var(--white);
+    border: 2px solid var(--drkergreen);
+    border-radius: 1rem;
+}
+
+.card_btn-toggle button:hover {
+    color: var(--white);
+    background-color: var(--drkergreen);
+    cursor: pointer;
+}
+
+.trailer-review {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.review-bar {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: 1rem;
+    background-color: var(--bg);
+}
+
+.review_input {
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    background-color: var(--bg5);
+    color: var(--fc2);
+    border: 5px solid var(--border);
+    border-radius: .25rem;
+    
+}
+
+.review_btn {
+    padding: 1rem;
+    font-weight: 700;
+    background-color: var(--bg5);
+    border: 5px solid var(--border);
+    border-radius: .25rem;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+    
+
+@media (min-width: 40rem) {
+    .card {
+        width: 40%;
+        margin: 1rem;
+    }
+
+    .enavant_title {
+        font-size: 2rem;
+    }
+    .search-bar {
+        padding: 2rem 0;
+        gap: 2rem;
+    }
+    
+    .search-bar_input {
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+    }
+    
+    .search-bar_btn {
+        padding: 0 2rem;
+        font-weight: 700;
+    }
+
+}
+
+@media (min-width: 105rem) {
+    .card {
+        width: 30%;
+    }
+
+    .enavant_title {
+        font-size: 3rem;
+    }
+}
+
+
+
+/* Classe + */
+
+
+.review_green {
+    background-color: var(--bg4);
+}
+
+.review_brown {
+    background-color: var(--bg3);
+}
+
+.review_red {
+    background-color: var(--bg2);
+}
